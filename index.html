@@ -352,6 +352,32 @@ margin-top:40px;
   </section>
 </footer>
 
+<script>
+function searchScholarship() {
+  let country = document.getElementById("searchBox").value.toLowerCase();
 
+  if (country == "germany") {
+    alert("🇩🇪 DAAD Scholarship");
+  } else if (country == "usa") {
+    alert("🇺🇸 Fulbright Scholarship");
+  } else if (country == "canada") {
+    alert("🇨🇦 Vanier Canada Graduate Scholarship");
+  } else if (country == "united kingdom" || country == "uk") {
+    alert("🇬🇧 Chevening Scholarship");
+  } else if (country == "south korea" || country == "korea") {
+    alert("🇰🇷 Global Korea Scholarship (GKS)");
+  } else if (country == "japan") {
+    alert("🇯🇵 MEXT Scholarship");
+  } else if (country == "australia") {
+    alert("🇦🇺 Australia Awards Scholarship");
+  } else if (country == "china") {
+    alert("🇨🇳 CSC Scholarship");
+  } else if (country == "turkey") {
+    alert("🇹🇷 Türkiye Scholarships");
+  } else {
+    alert("Scholarship not found.");
+  }
+}
+</script>
 </body>
 </html>
