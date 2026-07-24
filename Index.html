@@ -1,1 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ScholarGuide AI</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+<h1>🎓 ScholarGuide AI</h1>
+<p>Your Smart Scholarship Assistant</p>
+</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#finder">Scholarships</a>
+<a href="#eligibility">Eligibility</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+
+<h2>Find Your Dream Scholarship 🌍</h2>
+
+<p>
+Discover fully funded scholarships from Germany, USA, UK,
+Canada, Australia, Japan, South Korea, China,
+Türkiye and Europe.
+</p>
+
+<a href="#finder">
+<button class="primary-btn">
+🚀 Start Exploring
+</button>
+</a>
+
+</section>
+
+<section id="finder" class="finder">
+
+<h2>🔍 Scholarship Finder</h2>
+
+<input
+type="text"
+id="searchBox"
+placeholder="Search Country (Germany, USA...)">
+
+<br><br>
+
+<button onclick="searchScholarship()">
+Search Scholarship
+</button>
+
+<br><br>
+
+<select id="countrySelect" onchange="openCountryPage()">
+
+<option value="">🌍 Select Country</option>
+
+<option value="daad.html">🇩🇪 Germany</option>
+
+<option value="usa.html">🇺🇸 USA</option>
+
+<option value="chevening.html">🇬🇧 United Kingdom</option>
+
+<option value="canada.html">🇨🇦 Canada</option>
+
+<option value="gks.html">🇰🇷 South Korea</option>
+
+<option value="mext.html">🇯🇵 Japan</option>
+
+<option value="csc.html">🇨🇳 China</option>
+
+<option value="australia.html">🇦🇺 Australia</option>
+
+<option value="turkiye.html">🇹🇷 Türkiye</option>
+
+<option value="europe.html">🇪🇺 Europe</option>
+
+</select>
+
+</section>
+  <section class="latest">
+
+<h2>🔥 Latest Scholarships</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>🇩🇪 DAAD Scholarship</h3>
+<p>Study in Germany with full funding.</p>
+<span class="badge open">🟢 Open Soon</span>
+</div>
+
+<div class="card">
+<h3>🇰🇷 GKS Scholarship</h3>
+<p>Government of Korea Scholarship.</p>
+<span class="badge soon">🟡 Coming Soon</span>
+</div>
+
+<div class="card">
+<h3>🇯🇵 MEXT Scholarship</h3>
+<p>Japanese Government Scholarship.</p>
+<span class="badge open">🟢 Open Soon</span>
+</div>
+
+<div class="card">
+<h3>🇨🇳 CSC Scholarship</h3>
+<p>Chinese Government Scholarship.</p>
+<span class="badge open">🟢 Open Soon</span>
+</div>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="stat-card">
+<h2>50+</h2>
+<p>Countries</p>
+</div>
+
+<div class="stat-card">
+<h2>500+</h2>
+<p>Scholarships</p>
+</div>
+
+<div class="stat-card">
+<h2>1000+</h2>
+<p>Students Guided</p>
+</div>
+
+<div class="stat-card">
+<h2>100+</h2>
+<p>Fully Funded</p>
+</div>
+
+</section>
+
+<section class="popular">
+
+<h2>🌍 Popular Scholarships</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>🇩🇪 Germany</h3>
+<p>DAAD Scholarship</p>
+<a href="daad.html"><button>View Details</button></a>
+</div>
+
+<div class="card">
+<h3>🇺🇸 USA</h3>
+<p>Fulbright Scholarship</p>
+<a href="usa.html"><button>View Details</button></a>
+</div>
+
+<div class="card">
+<h3>🇬🇧 United Kingdom</h3>
+<p>Chevening Scholarship</p>
+<a href="chevening.html"><button>View Details</button></a>
+</div>
+
+<div class="card">
+<h3>🇨🇦 Canada</h3>
+<p>Vanier Scholarship</p>
+<a href="canada.html"><button>View Details</button></a>
+</div>
+
+<div class="card">
+<h3>🇰🇷 South Korea</h3>
+<p>GKS Scholarship</p>
+<a href="gks.html"><button>View Details</button></a>
+</div>
+
+<div class="card">
+<h3>🇯🇵 Japan</h3>
+<p>MEXT Scholarship</p>
+<a href="mext.html"><button>View Details</button></a>
+</div>
+
+<div class="card">
+<h3>🇨🇳 China</h3>
+<p>CSC Scholarship</p>
+<a href="csc.html"><button>View Details</button></a>
+</div>
+
+<div class="card">
+<h3>🇦🇺 Australia</h3>
+<p>Australia Awards</p>
+<a href="australia.html"><button>View Details</button></a>
+</div>
+
+<div class="card">
+<h3>🇹🇷 Türkiye</h3>
+<p>Türkiye Scholarships</p>
+<a href="turkiye.html"><button>View Details</button></a>
+</div>
+
+<div class="card">
+<h3>🇪🇺 Europe</h3>
+<p>Erasmus Mundus</p>
+<a href="europe.html"><button>View Details</button></a>
+</div>
+
+</div>
+
+  </section>
+  <section id="eligibility" class="eligibility">
+
+<h2>🤖 AI Eligibility Checker</h2>
+
+<select id="education">
+<option>Class 10</option>
+<option>Class 12</option>
+<option>Bachelor's</option>
+<option>Master's</option>
+</select>
+
+<br><br>
+
+<input
+type="number"
+id="percentage"
+placeholder="Enter Your Percentage">
+
+<br><br>
+
+<button onclick="checkEligibility()">
+Check Eligibility
+</button>
+
+<p id="result"></p>
+
+</section>
+
+<section class="assistant">
+
+<h2>🤖 Scholarship AI Assistant</h2>
+
+<input
+type="text"
+placeholder="Ask anything about scholarships...">
+
+<br><br>
+
+<button>
+Ask AI
+</button>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2>📩 Contact Us</h2>
+
+<input
+type="text"
+placeholder="Your Name">
+
+<br><br>
+
+<input
+type="email"
+placeholder="Your Email">
+
+<br><br>
+
+<textarea
+placeholder="Your Message"
+rows="5"></textarea>
+
+<br><br>
+
+<button>
+Send Message
+</button>
+
+</section>
+
+<footer>
+
+<h3>🎓 ScholarGuide AI</h3>
+
+<p>
+Helping students find fully funded scholarships worldwide.
+</p>
+
+<p>
+© 2026 ScholarGuide AI | Created by Laiba ❤️
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+  </html>
 
