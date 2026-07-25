@@ -1,123 +1,47 @@
-// ===============================
-// ScholarGuide AI v2
-// ===============================
+// ===== ScholarGuide AI Premium v4 =====
 
-// Country Dropdown
+// Scholarship Finder
 function openCountryPage() {
 
-const page = document.getElementById("countrySelect").value;
+const country =
+document.getElementById("countrySelect").value;
 
-if(page !== ""){
-window.location.href = page;
+if(country !== ""){
+window.location.href = country;
 }
 
 }
 
-// Search Scholarship
-function searchScholarship(){
-
-const country = document
-.getElementById("searchBox")
-.value
-.toLowerCase()
-.trim();
-
-if(country=="germany"){
-window.location.href="daad.html";
-}
-
-else if(country=="usa" || country=="united states"){
-window.location.href="usa.html";
-}
-
-else if(country=="united kingdom" || country=="uk"){
-window.location.href="chevening.html";
-}
-
-else if(country=="canada"){
-window.location.href="canada.html";
-}
-
-else if(country=="south korea" || country=="korea"){
-window.location.href="gks.html";
-}
-
-else if(country=="japan"){
-window.location.href="mext.html";
-}
-
-else if(country=="china"){
-window.location.href="csc.html";
-}
-
-else if(country=="australia"){
-window.location.href="australia.html";
-}
-
-else if(country=="turkey" || country=="türkiye"){
-window.location.href="turkiye.html";
-}
-
-else if(country=="europe"){
-window.location.href="europe.html";
-}
-
-else{
-
-alert("❌ Scholarship not found!");
-
-}
-
-}
-// ===============================
 // AI Eligibility Checker
-// ===============================
-
 function checkEligibility(){
 
-const education = document.getElementById("education").value;
-const percentage = parseInt(document.getElementById("percentage").value);
+const education =
+document.getElementById("education").value;
 
-let result = "";
+const percentage =
+parseFloat(document.getElementById("percentage").value);
+
+const result =
+document.getElementById("result");
 
 if(isNaN(percentage)){
-result = "❌ Please enter your percentage.";
+result.innerHTML = "⚠️ Please enter your percentage.";
+return;
 }
 
-else if(percentage >= 90){
-
-result = "🎉 Excellent! You have a strong chance for many fully funded scholarships.";
-
+if(percentage >= 85){
+result.innerHTML =
+"🎉 Great! You are eligible for many scholarships.";
 }
 
-else if(percentage >= 75){
-
-result = "✅ Good! You may be eligible for several international scholarships.";
-
-}
-
-else if(percentage >= 60){
-
-result = "📚 You can still apply for many scholarships. Keep improving your profile.";
-
+else if(percentage >= 70){
+result.innerHTML =
+"✅ You may qualify for several scholarships.";
 }
 
 else{
-
-result = "💪 Don't worry! Improve your academics and extracurricular activities.";
-
+result.innerHTML =
+"📚 Improve your percentage for better scholarship opportunities.";
 }
-
-document.getElementById("result").innerHTML = result;
-
-}
-
-// ===============================
-// Future AI Assistant
-// ===============================
-
-function askAI(){
-
-alert("🤖 AI Assistant is coming soon!");
 
 }
