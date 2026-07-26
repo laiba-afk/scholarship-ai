@@ -24,19 +24,23 @@
 <a href="#">Home</a>
 <a href="#finder">Finder</a>
 <a href="#eligibility">Eligibility</a>
+<a href="#popular">Scholarships</a>
 <a href="#contact">Contact</a>
 </nav>
 
 </header>
 
+
 <section class="hero">
 
 <div class="hero-content">
 
-<h1>Find Your Dream Scholarship</h1>
+<h1>
+Find Your Dream Scholarship
+</h1>
 
 <p>
-Discover fully funded scholarships from the world's top countries with one smart platform.
+Discover fully funded scholarships from top countries with one smart AI platform.
 </p>
 
 <div class="hero-buttons">
@@ -46,6 +50,7 @@ Discover fully funded scholarships from the world's top countries with one smart
 Explore Scholarships
 </button>
 </a>
+
 
 <a href="#eligibility">
 <button class="secondary-btn">
@@ -58,25 +63,28 @@ Check Eligibility
 </div>
 
 </section>
+<!-- Scholarship Finder -->
 
 <section id="finder" class="finder">
 
 <h2>🔍 Scholarship Finder</h2>
 
-<input
-type="text"
+<p>
+Search scholarships by country and find your best opportunities.
+</p>
+
+
+<div class="finder-box">
+
+<input 
+type="text" 
 id="searchBox"
 placeholder="Search Country">
 
-<button onclick="searchScholarship()">
-Search
-</button>
-
-<br><br>
 
 <select id="countrySelect" onchange="openCountryPage()">
 
-<option value="">Select Country</option>
+<option value="">🌍 Select Country</option>
 
 <option value="daad.html">🇩🇪 Germany</option>
 
@@ -100,41 +108,92 @@ Search
 
 </select>
 
-  </section>
-  <!-- Smart Eligibility Checker -->
+
+<button class="primary-btn" onclick="searchScholarship()">
+Search
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- Smart Eligibility Checker -->
 
 <section id="eligibility" class="eligibility">
 
 <h2>🤖 Smart Eligibility Checker</h2>
 
 <p>
-Check your eligibility for fully funded scholarships in seconds.
+Check your scholarship chances with our AI assistant.
 </p>
+
 
 <div class="eligibility-box">
 
+
 <select id="education">
-<option value="">🎓 Select Education</option>
-<option>Class 12</option>
-<option>Bachelor's</option>
-<option>Master's</option>
+
+<option value="">
+🎓 Select Education
+</option>
+
+<option>
+Class 12
+</option>
+
+<option>
+Bachelor's
+</option>
+
+<option>
+Master's
+</option>
+
 </select>
 
-<input
+
+
+<input 
 type="number"
 id="percentage"
 placeholder="📊 Enter Percentage">
 
+
+
 <select id="english">
-<option value="">🇬🇧 English Test</option>
-<option>IELTS</option>
-<option>TOEFL</option>
-<option>Duolingo</option>
-<option>Not Yet</option>
+
+<option value="">
+🇬🇧 English Test
+</option>
+
+<option>
+IELTS
+</option>
+
+<option>
+TOEFL
+</option>
+
+<option>
+Duolingo
+</option>
+
+<option>
+Not Yet
+</option>
+
 </select>
 
+
+
 <select id="country">
-<option value="">🌍 Preferred Country</option>
+
+<option value="">
+🌍 Preferred Country
+</option>
+
 <option>Germany</option>
 <option>USA</option>
 <option>United Kingdom</option>
@@ -144,117 +203,271 @@ placeholder="📊 Enter Percentage">
 <option>China</option>
 <option>Australia</option>
 <option>Türkiye</option>
-<option>Europe</option>
+
 </select>
+
+
 
 <button class="primary-btn" onclick="checkEligibility()">
 🔍 Check Eligibility
 </button>
 
+
 <div id="result"></div>
+
 
 </div>
 
 </section>
+  <!-- Popular Scholarships -->
 
-<!-- Popular Scholarships -->
-
-<section class="popular">
+<section id="popular" class="popular">
 
 <h2>🌍 Popular Scholarships</h2>
 
+<p>
+Explore fully funded opportunities from top countries.
+</p>
+
+
 <div class="grid">
 
+
 <div class="card">
-<h3>🇩🇪 DAAD</h3>
+
+<h3>🇩🇪 DAAD Scholarship</h3>
+
 <p>💰 Fully Funded</p>
+
 <p>📅 October 2027</p>
-<span class="open">Open Soon</span>
-<button>View Details</button>
+
+<span class="open">
+Open Soon
+</span>
+
+<a href="daad.html">
+<button>
+View Details
+</button>
+</a>
+
 </div>
 
+
+
 <div class="card">
+
 <h3>🇺🇸 Fulbright</h3>
+
 <p>💰 Fully Funded</p>
+
 <p>📅 May 2027</p>
-<span class="open">Open Soon</span>
-<button>View Details</button>
+
+<span class="open">
+Open Soon
+</span>
+
+<a href="usa.html">
+<button>
+View Details
+</button>
+</a>
+
 </div>
 
+
+
+
 <div class="card">
+
 <h3>🇬🇧 Chevening</h3>
+
 <p>💰 Fully Funded</p>
+
 <p>📅 November 2027</p>
-<span class="open">Open Soon</span>
-<button>View Details</button>
+
+<span class="open">
+Open Soon
+</span>
+
+<a href="chevening.html">
+<button>
+View Details
+</button>
+</a>
+
 </div>
 
+
+
+
 <div class="card">
+
 <h3>🇨🇦 Vanier</h3>
+
 <p>💰 Fully Funded</p>
+
 <p>📅 November 2027</p>
-<span class="open">Open Soon</span>
-<button>View Details</button>
-</div>
+
+<span class="open">
+Open Soon
+</span>
+
+<a href="canada.html">
+<button>
+View Details
+</button>
+</a>
 
 </div>
 
-  </section>
-  <!-- Remaining Scholarship Cards -->
-
-<div class="grid">
-
-<div class="card">
-<h3>🇰🇷 GKS</h3>
-<p>💰 Fully Funded</p>
-<p>📅 September 2027</p>
-<span class="soon">Coming Soon</span>
-<a href="gks.html"><button>View Details</button></a>
-</div>
-
-<div class="card">
-<h3>🇯🇵 MEXT</h3>
-<p>💰 Fully Funded</p>
-<p>📅 May 2027</p>
-<span class="open">Open Soon</span>
-<a href="mext.html"><button>View Details</button></a>
-</div>
-
-<div class="card">
-<h3>🇨🇳 CSC</h3>
-<p>💰 Fully Funded</p>
-<p>📅 March 2027</p>
-<span class="open">Open Soon</span>
-<a href="csc.html"><button>View Details</button></a>
-</div>
-
-<div class="card">
-<h3>🇦🇺 Australia Awards</h3>
-<p>💰 Fully Funded</p>
-<p>📅 April 2027</p>
-<span class="open">Open Soon</span>
-<a href="australia.html"><button>View Details</button></a>
-</div>
-
-<div class="card">
-<h3>🇹🇷 Türkiye Scholarships</h3>
-<p>💰 Fully Funded</p>
-<p>📅 January 2027</p>
-<span class="open">Open Soon</span>
-<a href="turkiye.html"><button>View Details</button></a>
-</div>
-
-<div class="card">
-<h3>🇪🇺 Erasmus Mundus</h3>
-<p>💰 Fully Funded</p>
-<p>📅 January 2027</p>
-<span class="open">Open Soon</span>
-<a href="europe.html"><button>View Details</button></a>
-</div>
 
 </div>
 
 </section>
+  <!-- More Scholarships -->
+
+<section class="more-scholarships">
+
+<div class="grid">
+
+
+<div class="card">
+
+<h3>🇰🇷 GKS Scholarship</h3>
+
+<p>💰 Fully Funded</p>
+
+<p>📅 September 2027</p>
+
+<span class="open">
+Coming Soon
+</span>
+
+<a href="gks.html">
+<button>
+View Details
+</button>
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>🇯🇵 MEXT Scholarship</h3>
+
+<p>💰 Fully Funded</p>
+
+<p>📅 May 2027</p>
+
+<span class="open">
+Open Soon
+</span>
+
+<a href="mext.html">
+<button>
+View Details
+</button>
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>🇨🇳 CSC Scholarship</h3>
+
+<p>💰 Fully Funded</p>
+
+<p>📅 March 2027</p>
+
+<span class="open">
+Open Soon
+</span>
+
+<a href="csc.html">
+<button>
+View Details
+</button>
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>🇦🇺 Australia Awards</h3>
+
+<p>💰 Fully Funded</p>
+
+<p>📅 April 2027</p>
+
+<span class="open">
+Open Soon
+</span>
+
+<a href="australia.html">
+<button>
+View Details
+</button>
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>🇹🇷 Türkiye Scholarships</h3>
+
+<p>💰 Fully Funded</p>
+
+<p>📅 January 2027</p>
+
+<span class="open">
+Open Soon
+</span>
+
+<a href="turkiye.html">
+<button>
+View Details
+</button>
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>🇪🇺 Erasmus Mundus</h3>
+
+<p>💰 Fully Funded</p>
+
+<p>📅 January 2027</p>
+
+<span class="open">
+Open Soon
+</span>
+
+<a href="europe.html">
+<button>
+View Details
+</button>
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
 
 <!-- Contact -->
 
@@ -268,9 +481,13 @@ placeholder="📊 Enter Percentage">
 
 <textarea placeholder="Your Message"></textarea>
 
-<button class="primary-btn">Send Message</button>
+<button class="primary-btn">
+Send Message
+</button>
 
 </section>
+
+
 
 <!-- Footer -->
 
@@ -278,11 +495,18 @@ placeholder="📊 Enter Percentage">
 
 <h3>🎓 ScholarGuide AI</h3>
 
-<p>Your Smart Scholarship Assistant</p>
+<p>
+Your Smart Scholarship Assistant
+</p>
 
-<p>© 2026 ScholarGuide AI | Created by Laiba ❤️</p>
+<p>
+© 2026 ScholarGuide AI | Created by Laiba ❤️
+</p>
 
 </footer>
 
+
 </body>
-                                                      </html>
+
+</html>
+                     
