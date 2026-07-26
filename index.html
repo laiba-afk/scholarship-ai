@@ -7,7 +7,7 @@
 
 <title>ScholarGuide AI</title>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="Style.css">
 <script src="script.js" defer></script>
 
 </head>
@@ -31,49 +31,25 @@
 
 <section class="hero">
 
-<div class="hero-content">
+<div class="hero-text">
 
 <h1>Find Your Dream Scholarship 🌍</h1>
 
 <p>
-Discover fully funded scholarships from the world's top universities with ScholarGuide AI.
+Explore fully funded scholarships from top universities around the world.
+Start your study abroad journey with ScholarGuide AI.
 </p>
-
-<div class="hero-buttons">
 
 <a href="#finder">
-<button class="primary-btn">🚀 Explore Now</button>
-</a>
-
-<a href="#featured">
-<button class="secondary-btn">⭐ Featured</button>
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="featured" class="featured">
-
-<h2>⭐ Featured Scholarship</h2>
-
-<div class="featured-card">
-
-<h3>🇩🇪 DAAD Scholarship 2027</h3>
-
-<p>
-Fully funded scholarship in Germany including tuition, monthly stipend, travel and health insurance.
-</p>
-
-<a href="daad.html">
-<button>View Details</button>
+<button class="primary-btn">
+🚀 Explore Scholarships
+</button>
 </a>
 
 </div>
 
 </section>
+
 <section id="finder" class="finder">
 
 <h2>🔍 Scholarship Finder</h2>
@@ -81,25 +57,28 @@ Fully funded scholarship in Germany including tuition, monthly stipend, travel a
 <input
 type="text"
 id="searchBox"
-placeholder="Search by country...">
+placeholder="Search Scholarship Country">
 
 <br><br>
 
 <select id="countrySelect" onchange="openCountryPage()">
 
 <option value="">🌍 Select Country</option>
+
 <option value="daad.html">🇩🇪 Germany</option>
 <option value="usa.html">🇺🇸 USA</option>
 <option value="chevening.html">🇬🇧 United Kingdom</option>
+<option value="canada.html">🇨🇦 Canada</option>
 <option value="gks.html">🇰🇷 South Korea</option>
 <option value="mext.html">🇯🇵 Japan</option>
 <option value="csc.html">🇨🇳 China</option>
+<option value="australia.html">🇦🇺 Australia</option>
+<option value="turkiye.html">🇹🇷 Türkiye</option>
+<option value="europe.html">🇪🇺 Europe</option>
 
 </select>
 
 </section>
-
-
 <section class="popular">
 
 <h2>🌍 Popular Scholarships</h2>
@@ -109,89 +88,140 @@ placeholder="Search by country...">
 <div class="card">
 <h3>🇩🇪 Germany</h3>
 <p>DAAD Scholarship</p>
-<a href="daad.html"><button>View</button></a>
+<p>📅 Expected Deadline: October</p>
+<p class="open">🟢 Open Soon</p>
+<a href="daad.html"><button>View Details</button></a>
 </div>
 
 <div class="card">
 <h3>🇺🇸 USA</h3>
 <p>Fulbright Scholarship</p>
-<a href="usa.html"><button>View</button></a>
+<p>📅 Expected Deadline: May</p>
+<p class="open">🟢 Open Soon</p>
+<a href="usa.html"><button>View Details</button></a>
 </div>
 
 <div class="card">
-<h3>🇬🇧 UK</h3>
+<h3>🇬🇧 United Kingdom</h3>
 <p>Chevening Scholarship</p>
-<a href="chevening.html"><button>View</button></a>
+<p>📅 Expected Deadline: November</p>
+<p class="open">🟢 Open Soon</p>
+<a href="chevening.html"><button>View Details</button></a>
 </div>
 
 <div class="card">
-<h3>🇰🇷 Korea</h3>
+<h3>🇨🇦 Canada</h3>
+<p>Vanier Scholarship</p>
+<p>📅 Expected Deadline: November</p>
+<p class="open">🟢 Open Soon</p>
+<a href="canada.html"><button>View Details</button></a>
+</div>
+
+<div class="card">
+<h3>🇰🇷 South Korea</h3>
 <p>GKS Scholarship</p>
-<a href="gks.html"><button>View</button></a>
+<p>📅 Expected Deadline: September</p>
+<p class="soon">🟡 Coming Soon</p>
+<a href="gks.html"><button>View Details</button></a>
 </div>
 
 <div class="card">
 <h3>🇯🇵 Japan</h3>
 <p>MEXT Scholarship</p>
-<a href="mext.html"><button>View</button></a>
+<p>📅 Expected Deadline: May</p>
+<p class="open">🟢 Open Soon</p>
+<a href="mext.html"><button>View Details</button></a>
 </div>
+
+<div class="card">
+<h3>🇨🇳 China</h3>
+<p>CSC Scholarship</p>
+<p>📅 Expected Deadline: March</p>
+<p class="open">🟢 Open Soon</p>
+<a href="csc.html"><button>View Details</button></a>
 </div>
-</section>
+
+<div class="card">
+<h3>🇦🇺 Australia</h3>
+<p>Australia Awards</p>
+<p>📅 Expected Deadline: April</p>
+<p class="open">🟢 Open Soon</p>
+<a href="australia.html"><button>View Details</button></a>
+</div>
+
+<div class="card">
+<h3>🇹🇷 Türkiye</h3>
+<p>Türkiye Scholarships</p>
+<p>📅 Expected Deadline: January</p>
+<p class="open">🟢 Open Soon</p>
+<a href="turkiye.html"><button>View Details</button></a>
+</div>
+
+<div class="card">
+<h3>🇪🇺 Europe</h3>
+<p>Erasmus Mundus</p>
+<p>📅 Expected Deadline: January</p>
+<p class="open">🟢 Open Soon</p>
+<a href="europe.html"><button>View Details</button></a>
+</div>
+
+</
   <section id="eligibility" class="eligibility">
 
-<h2>🤖 AI Eligibility Checker</h2>
+<h2>🤖 Smart Eligibility Checker</h2>
 
 <select id="education">
-<option>Class 10</option>
+<option value="">🎓 Select Education</option>
 <option>Class 12</option>
 <option>Bachelor's</option>
 <option>Master's</option>
 </select>
 
-<br><br>
+<input type="number" id="percentage" placeholder="📊 Percentage">
 
-<input
-type="number"
-id="percentage"
-placeholder="Enter Your Percentage">
+<select id="english">
+<option value="">🇬🇧 English Test</option>
+<option>IELTS</option>
+<option>TOEFL</option>
+<option>Duolingo</option>
+<option>None</option>
+</select>
 
-<br><br>
+<select id="country">
+<option value="">🌍 Preferred Country</option>
+<option>Germany</option>
+<option>USA</option>
+<option>United Kingdom</option>
+<option>Canada</option>
+<option>South Korea</option>
+<option>Japan</option>
+<option>China</option>
+<option>Australia</option>
+<option>Türkiye</option>
+<option>Europe</option>
+</select>
 
 <button onclick="checkEligibility()">
-Check Eligibility
+🔍 Check Eligibility
 </button>
 
-<p id="result"></p>
+<div id="result"></div>
 
 </section>
-
 
 <section id="contact" class="contact">
 
 <h2>📩 Contact Us</h2>
 
-<input
-type="text"
-placeholder="Your Name">
+<input type="text" placeholder="Your Name">
 
-<br><br>
+<input type="email" placeholder="Your Email">
 
-<input
-type="email"
-placeholder="Your Email">
-
-<br><br>
-
-<textarea
-rows="5"
-placeholder="Your Message"></textarea>
-
-<br><br>
+<textarea rows="5" placeholder="Your Message"></textarea>
 
 <button>Send Message</button>
 
 </section>
-
 
 <footer>
 
@@ -204,5 +234,5 @@ placeholder="Your Message"></textarea>
 </footer>
 
 </body>
-
-  </html>
+</html>
+                                            </html>
