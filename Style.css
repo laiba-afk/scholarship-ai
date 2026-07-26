@@ -1,15 +1,16 @@
-/* ===== LUXURY DESIGN PART 1 ===== */
+/* ===== ScholarGuide AI Luxury Design Part 1 ===== */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
+    font-family:'Poppins', Arial, sans-serif;
 }
 
+
 body{
-    background:#f4f8ff;
-    color:#1a1a1a;
+    background:#f5f8ff;
+    color:#222;
 }
 
 
@@ -22,289 +23,530 @@ header{
     justify-content:space-between;
     align-items:center;
     background:white;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
     position:sticky;
     top:0;
     z-index:100;
 }
 
-.logo{
-    font-size:28px;
-    font-weight:700;
+
+.logo h2{
     color:#123c8c;
+    font-size:26px;
 }
+
 
 nav a{
     text-decoration:none;
-    margin-left:25px;
     color:#333;
-    font-weight:500;
+    margin-left:25px;
+    font-weight:600;
+}
+
+
+nav a:hover{
+    color:#123c8c;
 }
 
 
 /* Hero Section */
 
 .hero{
-    min-height:85vh;
+    min-height:80vh;
     display:flex;
     align-items:center;
-    justify-content:space-between;
-    padding:60px 8%;
+    padding:70px 8%;
     background:linear-gradient(135deg,#eaf3ff,#ffffff);
 }
 
 
-.hero-text{
-    width:50%;
+.hero-content{
+    max-width:650px;
 }
 
-.hero-text h1{
+
+.hero-content h1{
     font-size:55px;
-    line-height:1.2;
     color:#102a6b;
+    line-height:1.2;
 }
 
-.hero-text p{
+
+.hero-content p{
     margin-top:20px;
     font-size:18px;
     color:#555;
+    line-height:1.6;
 }
 
 
-.hero-btn{
-    display:inline-block;
+/* Buttons */
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+}
+
+
+.primary-btn,
+.secondary-btn{
     margin-top:30px;
-    padding:15px 35px;
-    background:#123c8c;
-    color:white;
+    padding:14px 30px;
     border-radius:30px;
-    text-decoration:none;
-    font-weight:600;
-    box-shadow:0 10px 25px rgba(18,60,140,0.3);
-}
-
-
-.hero-btn:hover{
-    transform:translateY(-3px);
-}
-/* ===== LUXURY DESIGN PART 2 ===== */
-/* Smart Eligibility Checker */
-
-.eligibility-section{
-    padding:70px 8%;
-    background:#ffffff;
-}
-
-
-.eligibility-title{
-    text-align:center;
-    font-size:36px;
-    color:#102a6b;
-    margin-bottom:40px;
-}
-
-
-.eligibility-card{
-    max-width:900px;
-    margin:auto;
-    padding:40px;
-    background:rgba(255,255,255,0.8);
-    border-radius:25px;
-    box-shadow:0 15px 40px rgba(0,0,0,0.12);
-    border:1px solid #e5edff;
-}
-
-
-.eligibility-card h3{
-    font-size:28px;
-    color:#123c8c;
-    margin-bottom:20px;
-}
-
-
-.eligibility-card p{
-    color:#666;
     font-size:16px;
-    margin-bottom:25px;
-}
-
-
-.eligibility-card select,
-.eligibility-card input{
-    width:100%;
-    padding:15px;
-    margin-bottom:15px;
-    border-radius:12px;
-    border:1px solid #d7e3ff;
-    outline:none;
-    font-size:15px;
-}
-
-
-.check-btn{
-    width:100%;
-    padding:16px;
-    border:none;
-    border-radius:30px;
-    background:#123c8c;
-    color:white;
-    font-size:17px;
     font-weight:600;
     cursor:pointer;
 }
 
 
-.check-btn:hover{
-    background:#0d2d6b;
+.primary-btn{
+    background:#123c8c;
+    color:white;
+    border:none;
+    box-shadow:0 10px 25px rgba(18,60,140,0.25);
 }
-/* ===== LUXURY DESIGN PART 3 ===== */
-/* Popular Scholarships */
 
-.scholarship-section{
+
+.secondary-btn{
+    background:white;
+    color:#123c8c;
+    border:2px solid #123c8c;
+}
+
+
+.primary-btn:hover,
+.secondary-btn:hover{
+    transform:translateY(-3px);
+}
+/* ===== Luxury Design Part 2 ===== */
+/* Finder + Eligibility */
+
+
+.finder,
+.eligibility{
     padding:70px 8%;
-    background:#f4f8ff;
+    text-align:center;
 }
 
 
-.section-title{
-    text-align:center;
+.finder{
+    background:white;
+}
+
+
+.finder h2,
+.eligibility h2{
     font-size:36px;
     color:#102a6b;
-    margin-bottom:40px;
-}
-
-
-.scholarship-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:30px;
-}
-
-
-.scholarship-card{
-    background:white;
-    padding:30px;
-    border-radius:25px;
-    box-shadow:0 15px 35px rgba(0,0,0,0.1);
-    transition:0.3s;
-    border:1px solid #e6edff;
-}
-
-
-.scholarship-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 20px 45px rgba(18,60,140,0.2);
-}
-
-
-.scholarship-card h3{
-    color:#123c8c;
-    font-size:24px;
     margin-bottom:15px;
 }
 
 
-.scholarship-card p{
-    color:#555;
-    line-height:1.6;
-    margin-bottom:20px;
+.finder p,
+.eligibility p{
+    color:#666;
+    margin-bottom:35px;
+    font-size:17px;
 }
 
 
-.card-btn{
-    display:inline-block;
-    padding:12px 25px;
-    background:#123c8c;
-    color:white;
+/* Finder Box */
+
+.finder-box{
+    max-width:700px;
+    margin:auto;
+    padding:35px;
+    background:white;
     border-radius:25px;
-    text-decoration:none;
+    box-shadow:0 15px 40px rgba(0,0,0,0.12);
+}
+
+
+.finder-box input,
+.finder-box select,
+.eligibility-box input,
+.eligibility-box select{
+
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+
+    border-radius:15px;
+    border:1px solid #dbe5ff;
+
+    font-size:16px;
+    outline:none;
+}
+
+
+
+/* Eligibility */
+
+.eligibility{
+    background:linear-gradient(135deg,#f0f6ff,#ffffff);
+}
+
+
+.eligibility-box{
+
+    max-width:650px;
+    margin:auto;
+
+    padding:40px;
+
+    background:rgba(255,255,255,0.9);
+
+    border-radius:30px;
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,0.12);
+
+    border:1px solid #e4ecff;
+}
+
+
+.eligibility-box .primary-btn{
+    width:100%;
+}
+
+
+#result{
+
+    margin-top:20px;
+
+    padding:15px;
+
+    border-radius:15px;
+
     font-weight:600;
+
+}
+/* ===== Luxury Design Part 3 ===== */
+/* Popular Scholarships Cards */
+
+
+.popular,
+.more-scholarships{
+    padding:70px 8%;
+    background:#f5f8ff;
+    text-align:center;
 }
 
 
-.card-btn:hover{
+.popular h2{
+    font-size:36px;
+    color:#102a6b;
+    margin-bottom:15px;
+}
+
+
+.popular > p{
+    color:#666;
+    margin-bottom:35px;
+}
+
+
+/* Cards Grid */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+    margin-top:35px;
+}
+
+
+/* Scholarship Card */
+
+.card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    text-align:left;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,0.10);
+
+    border:1px solid #e5edff;
+
+    transition:0.3s;
+
+}
+
+
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 20px 45px rgba(18,60,140,0.20);
+
+}
+
+
+
+.card h3{
+
+    color:#123c8c;
+
+    font-size:23px;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.card p{
+
+    color:#555;
+
+    margin:10px 0;
+
+}
+
+
+
+.open,
+.soon{
+
+    display:inline-block;
+
+    margin:15px 0;
+
+    padding:8px 18px;
+
+    border-radius:20px;
+
+    background:#eaf3ff;
+
+    color:#123c8c;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+
+
+.card button{
+
+    width:100%;
+
+    padding:13px;
+
+    border:none;
+
+    border-radius:25px;
+
+    background:#123c8c;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+
+
+.card button:hover{
+
     background:#0d2d6b;
-}
-/* ===== LUXURY DESIGN PART 4 ===== */
-/* Responsive Design + Final Effects */
 
+    }
+/* ===== Luxury Design Part 4 ===== */
+/* Contact + Footer + Responsive */
+
+
+/* Contact */
+
+.contact{
+
+    padding:70px 8%;
+
+    background:white;
+
+    text-align:center;
+
+}
+
+
+.contact h2{
+
+    font-size:36px;
+
+    color:#102a6b;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.contact input,
+.contact textarea{
+
+    width:100%;
+
+    max-width:600px;
+
+    padding:15px;
+
+    margin:10px auto;
+
+    display:block;
+
+    border-radius:15px;
+
+    border:1px solid #dbe5ff;
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+
+
+.contact textarea{
+
+    height:130px;
+
+    resize:none;
+
+}
+
+
+
+.contact .primary-btn{
+
+    width:220px;
+
+}
+
+
+/* Footer */
+
+footer{
+
+    background:#102a6b;
+
+    color:white;
+
+    text-align:center;
+
+    padding:35px 20px;
+
+}
+
+
+footer h3{
+
+    font-size:25px;
+
+    margin-bottom:10px;
+
+}
+
+
+footer p{
+
+    margin:8px;
+
+    opacity:0.9;
+
+}
+
+
+
+/* Mobile Responsive */
 
 @media(max-width:768px){
 
-    header{
-        padding:15px 5%;
-        flex-direction:column;
-        gap:15px;
-    }
+
+header{
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
 
 
-    nav a{
-        margin:0 8px;
-        font-size:14px;
-    }
+nav a{
 
+    margin:0 8px;
 
-    .hero{
-        flex-direction:column;
-        text-align:center;
-        padding:50px 5%;
-    }
-
-
-    .hero-text{
-        width:100%;
-    }
-
-
-    .hero-text h1{
-        font-size:38px;
-    }
-
-
-    .hero-text p{
-        font-size:16px;
-    }
-
-
-    .eligibility-section,
-    .scholarship-section{
-        padding:50px 5%;
-    }
-
-
-    .eligibility-card{
-        padding:25px;
-    }
-
-
-    .eligibility-title,
-    .section-title{
-        font-size:30px;
-    }
+    font-size:14px;
 
 }
 
 
 
-/* Smooth Animation */
+.hero{
 
-.hero,
-.eligibility-card,
-.scholarship-card{
-    animation:fadeUp 0.8s ease;
+    text-align:center;
+
+    padding:50px 5%;
+
 }
 
 
-@keyframes fadeUp{
 
-    from{
-        opacity:0;
-        transform:translateY(30px);
+.hero-content h1{
+
+    font-size:38px;
+
+}
+
+
+
+.hero-buttons{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+
+
+.finder,
+.eligibility,
+.popular,
+.more-scholarships,
+.contact{
+
+    padding:50px 5%;
+
+}
+
+
+
+.grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.eligibility-box,
+.finder-box{
+
+    padding:25px;
+
+}
+
+
     }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-
-      }
