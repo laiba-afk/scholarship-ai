@@ -757,3 +757,34 @@ nav a{
 
 
     }
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo-icon{
+    width:55px;
+    height:55px;
+    border-radius:18px;
+    background:linear-gradient(135deg,#123c8c,#4f8cff);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+    font-weight:700;
+    box-shadow:0 10px 25px rgba(18,60,140,.25);
+}
+
+.logo-text h2{
+    color:#123c8c;
+    font-size:28px;
+    margin:0;
+}
+
+.logo-text p{
+    color:#777;
+    font-size:13px;
+    margin-top:3px;
+}
