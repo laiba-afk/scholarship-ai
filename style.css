@@ -969,3 +969,168 @@ footer p{
     }
 
     }
+/* ===== Luxury Design Part 6 ===== */
+/* Premium Smart Eligibility Checker */
+
+.eligibility{
+    position:relative;
+    overflow:hidden;
+}
+
+.eligibility::before{
+    content:"";
+    position:absolute;
+    width:280px;
+    height:280px;
+    border-radius:50%;
+    background:#dbe9ff;
+    top:-120px;
+    right:-100px;
+    opacity:.55;
+}
+
+.eligibility::after{
+    content:"";
+    position:absolute;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    background:#eef5ff;
+    bottom:-100px;
+    left:-80px;
+}
+
+.eligibility h2,
+.eligibility > p,
+.eligibility-box{
+    position:relative;
+    z-index:2;
+}
+
+
+/* Premium heading */
+
+.eligibility h2{
+    font-size:40px;
+    letter-spacing:-.5px;
+}
+
+.eligibility > p{
+    max-width:600px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+/* Main checker card */
+
+.eligibility-box{
+    max-width:720px;
+    padding:35px;
+
+    background:rgba(255,255,255,.78);
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.9);
+    border-radius:32px;
+
+    box-shadow:
+        0 25px 60px rgba(18,60,140,.13),
+        inset 0 1px 0 rgba(255,255,255,.9);
+}
+
+
+/* Inputs */
+
+.eligibility-box input,
+.eligibility-box select{
+    height:58px;
+    margin:8px 0;
+
+    background:#f8faff;
+
+    border:1px solid #dce6fa;
+    border-radius:17px;
+
+    transition:.3s;
+}
+
+.eligibility-box input:hover,
+.eligibility-box select:hover{
+    border-color:#b8cdf5;
+}
+
+.eligibility-box input:focus,
+.eligibility-box select:focus{
+    border-color:#123c8c;
+
+    box-shadow:
+        0 0 0 4px rgba(18,60,140,.08);
+
+    background:white;
+}
+
+
+/* Check button */
+
+.eligibility-box .primary-btn{
+    height:58px;
+    margin-top:18px;
+
+    border-radius:18px;
+
+    background:linear-gradient(
+        135deg,
+        #123c8c,
+        #326bd5
+    );
+
+    box-shadow:
+        0 12px 30px rgba(18,60,140,.22);
+}
+
+.eligibility-box .primary-btn:hover{
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 16px 35px rgba(18,60,140,.28);
+}
+
+
+/* Result */
+
+#result{
+    background:#f5f8ff;
+    border:1px solid #e0e9fb;
+
+    min-height:0;
+
+    transition:.3s;
+}
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .eligibility{
+        padding:60px 5%;
+    }
+
+    .eligibility h2{
+        font-size:30px;
+    }
+
+    .eligibility-box{
+        padding:25px 20px;
+        border-radius:25px;
+    }
+
+    .eligibility-box input,
+    .eligibility-box select,
+    .eligibility-box .primary-btn{
+        height:55px;
+    }
+
+}
