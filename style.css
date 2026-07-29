@@ -1452,3 +1452,137 @@ footer p{
     }
 
 }
+/* ===== Luxury Design Part 8 ===== */
+/* Premium Contact + Footer */
+
+.contact{
+    position:relative;
+    overflow:hidden;
+    padding:90px 8%;
+    background:linear-gradient(135deg,#ffffff,#f3f7ff);
+}
+
+.contact h2{
+    font-size:40px;
+    margin-bottom:12px;
+}
+
+.contact::before{
+    content:"";
+    position:absolute;
+    width:260px;
+    height:260px;
+    border-radius:50%;
+    background:#e4efff;
+    top:-120px;
+    right:-80px;
+    opacity:.6;
+}
+
+.contact input,
+.contact textarea{
+    position:relative;
+    z-index:2;
+
+    background:rgba(255,255,255,.9);
+    border:1px solid #dce6fa;
+    box-shadow:0 8px 25px rgba(18,60,140,.05);
+
+    transition:.3s;
+}
+
+.contact input:focus,
+.contact textarea:focus{
+    border-color:#123c8c;
+    box-shadow:0 0 0 4px rgba(18,60,140,.08);
+}
+
+.contact .primary-btn{
+    position:relative;
+    z-index:2;
+
+    background:linear-gradient(
+        135deg,
+        #123c8c,
+        #326bd5
+    );
+
+    border-radius:18px;
+    box-shadow:0 12px 30px rgba(18,60,140,.2);
+}
+
+.contact .primary-btn:hover{
+    transform:translateY(-3px);
+}
+
+
+/* ===== Premium Footer ===== */
+
+footer{
+    position:relative;
+    overflow:hidden;
+
+    background:linear-gradient(
+        135deg,
+        #0b2255,
+        #123c8c
+    );
+
+    padding:50px 20px;
+}
+
+footer h3{
+    font-size:28px;
+}
+
+footer p{
+    color:rgba(255,255,255,.85);
+}
+
+footer::before{
+    content:"";
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:50%;
+
+    top:-90px;
+    right:10%;
+}
+
+footer::after{
+    content:"";
+    position:absolute;
+
+    width:120px;
+    height:120px;
+
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:50%;
+
+    bottom:-60px;
+    left:10%;
+}
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .contact{
+        padding:65px 5%;
+    }
+
+    .contact h2{
+        font-size:30px;
+    }
+
+    .contact .primary-btn{
+        width:100%;
+        max-width:300px;
+    }
+
+}
