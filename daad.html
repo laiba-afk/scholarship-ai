@@ -189,4 +189,556 @@ nav a:hover{
 
     gap:18px;
 
-    max-width:
+    max-width:1000px;
+
+    margin:-35px auto 60px;
+
+    padding:0 25px;
+
+    position:relative;
+    z-index:5;
+}
+
+.info-box{
+    background:white;
+
+    padding:22px 15px;
+
+    text-align:center;
+
+    border-radius:22px;
+
+    border:1px solid #e3ebfa;
+
+    box-shadow:
+    0 15px 35px rgba(18,60,140,.09);
+}
+
+.info-box span{
+    font-size:25px;
+}
+
+.info-box h4{
+    color:#123c8c;
+    margin:8px 0 4px;
+}
+
+.info-box p{
+    color:#666;
+    font-size:14px;
+}
+
+
+/* ===== Main Content ===== */
+
+.container{
+    width:84%;
+    max-width:1050px;
+    margin:auto;
+}
+
+.info-card{
+    background:white;
+
+    padding:35px;
+
+    margin-bottom:25px;
+
+    border-radius:28px;
+
+    border:1px solid #e3ebfa;
+
+    box-shadow:
+    0 15px 40px rgba(18,60,140,.07);
+
+    transition:.3s;
+}
+
+.info-card:hover{
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 20px 45px rgba(18,60,140,.11);
+}
+
+.info-card h2{
+    color:#123c8c;
+    font-size:28px;
+
+    margin-bottom:18px;
+}
+
+.info-card p{
+    color:#555;
+    font-size:16px;
+    line-height:1.8;
+}
+
+.info-card ul{
+    list-style:none;
+}
+
+.info-card li{
+    color:#555;
+
+    padding:10px 0;
+
+    border-bottom:1px solid #edf1f8;
+}
+
+.info-card li:last-child{
+    border-bottom:none;
+}
+
+
+/* ===== Apply Section ===== */
+
+.apply-card{
+    background:
+    linear-gradient(
+        135deg,
+        #102a6b,
+        #123c8c
+    );
+
+    color:white;
+
+    padding:40px;
+
+    border-radius:30px;
+
+    margin-bottom:30px;
+
+    box-shadow:
+    0 20px 45px rgba(18,60,140,.2);
+
+    text-align:center;
+}
+
+.apply-card h2{
+    font-size:30px;
+    margin-bottom:12px;
+}
+
+.apply-card p{
+    opacity:.9;
+    line-height:1.7;
+    margin-bottom:22px;
+}
+
+.primary-btn{
+    display:inline-block;
+
+    padding:14px 25px;
+
+    background:white;
+    color:#123c8c;
+
+    text-decoration:none;
+
+    border-radius:18px;
+
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.primary-btn:hover{
+    transform:translateY(-3px);
+}
+
+
+/* ===== Back Button ===== */
+
+.back-btn{
+    display:block;
+
+    width:max-content;
+
+    margin:0 auto 60px;
+
+    padding:13px 23px;
+
+    background:#eaf1ff;
+    color:#123c8c;
+
+    text-decoration:none;
+
+    border-radius:18px;
+
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:#123c8c;
+    color:white;
+}
+
+
+/* ===== Footer ===== */
+
+footer{
+    background:#102a6b;
+
+    color:white;
+
+    text-align:center;
+
+    padding:40px 20px;
+}
+
+footer h3{
+    font-size:25px;
+    margin-bottom:8px;
+}
+
+footer p{
+    margin:7px;
+    opacity:.85;
+}
+
+
+/* ===== Mobile ===== */
+
+@media(max-width:768px){
+
+    header{
+        width:94%;
+        padding:14px 18px;
+
+        flex-direction:column;
+        gap:12px;
+    }
+
+    nav{
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    nav a{
+        font-size:13px;
+        padding:8px 11px;
+    }
+
+    .hero{
+        padding:60px 5%;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .quick-info{
+        grid-template-columns:repeat(2,1fr);
+        margin-top:-25px;
+        padding:0 15px;
+    }
+
+    .container{
+        width:90%;
+    }
+
+    .info-card{
+        padding:25px;
+        border-radius:23px;
+    }
+
+    .info-card h2{
+        font-size:24px;
+    }
+
+    .apply-card{
+        padding:30px 22px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ===== Navbar ===== -->
+
+<header>
+
+<div class="logo">
+
+<div class="logo-icon">
+🎓
+</div>
+
+<h2>ScholarGuide AI</h2>
+
+</div>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="index.html#finder">Finder</a>
+
+<a href="index.html#eligibility">Eligibility</a>
+
+<a href="index.html#popular">Scholarships</a>
+
+</nav>
+
+</header>
+
+
+
+<!-- ===== Hero ===== -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<span class="badge">
+🇩🇪 Germany • Scholarship Guide
+</span>
+
+<h1>
+DAAD Scholarship
+</h1>
+
+<p>
+Explore study and research opportunities in Germany through the German Academic Exchange Service.
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ===== Quick Information ===== -->
+
+<div class="quick-info">
+
+<div class="info-box">
+
+<span>🇩🇪</span>
+
+<h4>Country</h4>
+
+<p>Germany</p>
+
+</div>
+
+
+<div class="info-box">
+
+<span>💰</span>
+
+<h4>Funding</h4>
+
+<p>Varies by programme</p>
+
+</div>
+
+
+<div class="info-box">
+
+<span>🎓</span>
+
+<h4>Study Level</h4>
+
+<p>Programme dependent</p>
+
+</div>
+
+
+<div class="info-box">
+
+<span>📅</span>
+
+<h4>Deadline</h4>
+
+<p>Varies by programme</p>
+
+</div>
+
+</div>
+
+
+
+<!-- ===== Main Content ===== -->
+
+<main class="container">
+
+
+<!-- About -->
+
+<section class="info-card">
+
+<h2>📖 About DAAD</h2>
+
+<p>
+The German Academic Exchange Service (DAAD) supports international students, graduates and researchers through a wide range of study, research and exchange opportunities in Germany.
+</p>
+
+</section>
+
+
+
+<!-- Eligibility -->
+
+<section class="info-card">
+
+<h2>✅ Eligibility</h2>
+
+<ul>
+
+<li>🎓 Academic requirements depend on the selected programme.</li>
+
+<li>📚 Applicants must meet the academic requirements of their chosen course or university.</li>
+
+<li>🌍 International applicants may be eligible depending on the programme.</li>
+
+<li>🗣️ Language requirements vary according to the course and university.</li>
+
+<li>📄 Additional requirements may apply for individual scholarships.</li>
+
+</ul>
+
+</section>
+
+
+
+<!-- Benefits -->
+
+<section class="info-card">
+
+<h2>🎁 Possible Benefits</h2>
+
+<ul>
+
+<li>💰 Scholarship funding or monthly financial support, depending on the programme.</li>
+
+<li>🏥 Insurance support may be included in selected programmes.</li>
+
+<li>✈️ Travel allowance may be available for eligible scholarship holders.</li>
+
+<li>🎓 Support for study or research in Germany may be provided according to the scholarship.</li>
+
+</ul>
+
+</section>
+
+
+
+<!-- Documents -->
+
+<section class="info-card">
+
+<h2>📄 Common Documents</h2>
+
+<ul>
+
+<li>📄 Academic transcripts and certificates</li>
+
+<li>📄 CV / Resume</li>
+
+<li>📝 Motivation letter or statement of purpose</li>
+
+<li>📑 Recommendation letters, if required</li>
+
+<li>🪪 Passport or identity document</li>
+
+<li>📋 Additional documents required by the selected programme</li>
+
+</ul>
+
+</section>
+
+
+
+<!-- How to Apply -->
+
+<section class="info-card">
+
+<h2>📝 How to Apply</h2>
+
+<ul>
+
+<li><strong>01.</strong> 🔎 Find a suitable DAAD scholarship or programme.</li>
+
+<li><strong>02.</strong> 📋 Check the exact eligibility requirements.</li>
+
+<li><strong>03.</strong> 📄 Prepare the required documents.</li>
+
+<li><strong>04.</strong> 🖥️ Follow the application instructions for that programme.</li>
+
+<li><strong>05.</strong> 📅 Submit before the programme's stated deadline.</li>
+
+</ul>
+
+</section>
+
+
+
+<!-- Official Website -->
+
+<section class="apply-card">
+
+<h2>🌐 Official DAAD Information</h2>
+
+<p>
+Always check the official DAAD website for the latest programme requirements, deadlines and application instructions.
+</p>
+
+<a
+class="primary-btn"
+href="https://www.daad.de/en/"
+target="_blank"
+rel="noopener noreferrer">
+
+Visit Official DAAD Website →
+
+</a>
+
+</section>
+
+
+
+<!-- Back -->
+
+<a class="back-btn" href="index.html">
+
+← Back to ScholarGuide AI
+
+</a>
+
+
+</main>
+
+
+
+<!-- ===== Footer ===== -->
+
+<footer>
+
+<h3>🎓 ScholarGuide AI</h3>
+
+<p>Your Smart Scholarship Assistant</p>
+
+<p>© 2026 ScholarGuide AI | Created by Laiba ❤️</p>
+
+</footer>
+
+
+</body>
+
+    </html>
