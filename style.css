@@ -1586,3 +1586,22 @@ footer::after{
     }
 
 }
+/* ===== Fix Scholarship Card Spacing ===== */
+
+.more-scholarships{
+    padding-top: 20px;
+}
+
+.more-scholarships .grid{
+    margin-top: 0;
+}
+
+.more-scholarships .card{
+    margin-bottom: 0;
+}
+
+.popular .card,
+.more-scholarships .card{
+    height: auto;
+    min-height: 0;
+}
