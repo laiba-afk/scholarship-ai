@@ -1,126 +1,725 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Erasmus Mundus Scholarship</title>
+
+<title>Erasmus Mundus | ScholarGuide AI</title>
 
 <style>
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',Arial,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-background:#eef5ff;
-padding:20px;
-color:#333;
+    background:#f5f8ff;
+    color:#222;
 }
 
-.header{
-background:linear-gradient(135deg,#2563eb,#1e40af);
-color:white;
-padding:35px 20px;
-border-radius:20px;
-text-align:center;
-margin-bottom:25px;
-box-shadow:0 6px 15px rgba(0,0,0,.2);
+/* ===== Navbar ===== */
+
+header{
+    width:90%;
+    margin:20px auto;
+    padding:16px 28px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:rgba(255,255,255,.82);
+    backdrop-filter:blur(18px);
+
+    border:1px solid #e2eaff;
+    border-radius:25px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+    position:sticky;
+    top:20px;
+    z-index:100;
 }
 
-.header h1{
-font-size:38px;
-margin-bottom:10px;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
 
-.header p{
-font-size:20px;
+.logo-icon{
+    width:48px;
+    height:48px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:linear-gradient(135deg,#123c8c,#4f8cff);
+    color:white;
+
+    border-radius:16px;
+    font-size:21px;
+
+    box-shadow:0 8px 20px rgba(18,60,140,.2);
 }
 
-.card{
-background:white;
-padding:20px;
-border-radius:18px;
-margin-bottom:20px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
+.logo h2{
+    color:#123c8c;
+    font-size:22px;
 }
 
-.card h2{
-color:#2563eb;
-margin-bottom:15px;
+nav{
+    display:flex;
+    gap:8px;
 }
 
-.card p,
-.card li{
-font-size:19px;
-line-height:1.8;
+nav a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    padding:10px 16px;
+    border-radius:22px;
+    transition:.3s;
 }
 
-ul{
-padding-left:20px;
+nav a:hover{
+    background:#123c8c;
+    color:white;
 }
 
-.btn{
-display:inline-block;
-margin-top:15px;
-padding:14px 24px;
-background:#2563eb;
-color:white;
-text-decoration:none;
-border-radius:10px;
-font-weight:bold;
+/* ===== Hero ===== */
+
+.hero{
+    position:relative;
+    overflow:hidden;
+
+    padding:80px 8%;
+
+    background:linear-gradient(135deg,#eaf3ff,#ffffff);
 }
 
-.btn:hover{
-background:#1d4ed8;
+.hero::before{
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+    height:320px;
+
+    background:#dbe9ff;
+    border-radius:50%;
+
+    right:-120px;
+    top:-120px;
+
+    opacity:.6;
 }
 
-.back{
-background:#555;
+.hero-content{
+    position:relative;
+    z-index:2;
+
+    max-width:1000px;
+    margin:auto;
+
+    text-align:center;
 }
 
-.back:hover{
-background:#333;
+.badge{
+    display:inline-block;
+
+    padding:10px 18px;
+    margin-bottom:20px;
+
+    background:#e8f1ff;
+    color:#123c8c;
+
+    border:1px solid #d5e4ff;
+    border-radius:30px;
+
+    font-size:14px;
+    font-weight:700;
 }
+
+.hero h1{
+    font-size:52px;
+    color:#102a6b;
+    line-height:1.15;
+    margin-bottom:18px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+
+    color:#606b7c;
+    font-size:18px;
+    line-height:1.7;
+}
+
+/* ===== Quick Info ===== */
+
+.quick-info{
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:18px;
+
+    max-width:1000px;
+
+    margin:-35px auto 60px;
+
+    padding:0 25px;
+
+    position:relative;
+    z-index:5;
+}
+
+.info-box{
+    background:white;
+
+    padding:22px 15px;
+
+    text-align:center;
+
+    border-radius:22px;
+
+    border:1px solid #e3ebfa;
+
+    box-shadow:0 15px 35px rgba(18,60,140,.09);
+}
+
+.info-box span{
+    font-size:25px;
+}
+
+.info-box h4{
+    color:#123c8c;
+    margin:8px 0 4px;
+}
+
+.info-box p{
+    color:#666;
+    font-size:14px;
+}
+
+/* ===== Main Content ===== */
+
+.container{
+    width:84%;
+    max-width:1050px;
+    margin:auto;
+}
+
+.info-card{
+    background:white;
+
+    padding:35px;
+
+    margin-bottom:25px;
+
+    border-radius:28px;
+
+    border:1px solid #e3ebfa;
+
+    box-shadow:0 15px 40px rgba(18,60,140,.07);
+
+    transition:.3s;
+}
+
+.info-card:hover{
+    transform:translateY(-3px);
+
+    box-shadow:0 20px 45px rgba(18,60,140,.11);
+}
+
+.info-card h2{
+    color:#123c8c;
+
+    font-size:28px;
+
+    margin-bottom:18px;
+}
+
+.info-card p{
+    color:#555;
+
+    font-size:16px;
+
+    line-height:1.8;
+}
+
+.info-card ul{
+    list-style:none;
+}
+
+.info-card li{
+    color:#555;
+
+    padding:10px 0;
+
+    border-bottom:1px solid #edf1f8;
+}
+
+.info-card li:last-child{
+    border-bottom:none;
+}
+
+/* ===== Apply Section ===== */
+
+.apply-card{
+    background:linear-gradient(135deg,#102a6b,#123c8c);
+
+    color:white;
+
+    padding:40px;
+
+    border-radius:30px;
+
+    margin-bottom:30px;
+
+    box-shadow:0 20px 45px rgba(18,60,140,.2);
+
+    text-align:center;
+}
+
+.apply-card h2{
+    font-size:30px;
+
+    margin-bottom:12px;
+}
+
+.apply-card p{
+    opacity:.9;
+
+    line-height:1.7;
+
+    margin-bottom:22px;
+}
+
+.primary-btn{
+    display:inline-block;
+
+    padding:14px 25px;
+
+    background:white;
+
+    color:#123c8c;
+
+    text-decoration:none;
+
+    border-radius:18px;
+
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.primary-btn:hover{
+    transform:translateY(-3px);
+}
+
+/* ===== Back Button ===== */
+
+.back-btn{
+    display:block;
+
+    width:max-content;
+
+    margin:0 auto 60px;
+
+    padding:13px 23px;
+
+    background:#eaf1ff;
+
+    color:#123c8c;
+
+    text-decoration:none;
+
+    border-radius:18px;
+
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:#123c8c;
+
+    color:white;
+}
+
+/* ===== Footer ===== */
+
+footer{
+    background:#102a6b;
+
+    color:white;
+
+    text-align:center;
+
+    padding:40px 20px;
+}
+
+footer h3{
+    font-size:25px;
+
+    margin-bottom:8px;
+}
+
+footer p{
+    margin:7px;
+
+    opacity:.85;
+}
+
+/* ===== Mobile ===== */
+
+@media(max-width:768px){
+
+    header{
+        width:94%;
+
+        padding:14px 18px;
+
+        flex-direction:column;
+
+        gap:12px;
+    }
+
+    nav{
+        width:100%;
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+    }
+
+    nav a{
+        font-size:13px;
+
+        padding:8px 11px;
+    }
+
+    .hero{
+        padding:60px 5%;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .quick-info{
+        grid-template-columns:repeat(2,1fr);
+
+        margin-top:-25px;
+
+        padding:0 15px;
+    }
+
+    .container{
+        width:90%;
+    }
+
+    .info-card{
+        padding:25px;
+
+        border-radius:23px;
+    }
+
+    .info-card h2{
+        font-size:24px;
+    }
+
+    .apply-card{
+        padding:30px 22px;
+    }
+
+}
+
 </style>
 
 </head>
 
 <body>
 
-<div class="header">
-<h1>🇪🇺 Erasmus Mundus Scholarship</h1>
-<p>Study in Europe with a Fully Funded Scholarship</p>
+<!-- ===== Navbar ===== -->
+
+<header>
+
+<div class="logo">
+
+<div class="logo-icon">
+🎓
 </div>
-<div class="card">
-<h2>📖 About</h2>
+
+<h2>ScholarGuide AI</h2>
+
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="index.html#finder">Finder</a>
+
+<a href="index.html#eligibility">Eligibility</a>
+
+<a href="index.html#popular">Scholarships</a>
+
+</nav>
+
+</header>
+
+
+<!-- ===== Hero ===== -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<span class="badge">
+🇪🇺 Europe • Scholarship Guide
+</span>
+
+<h1>
+Erasmus Mundus Joint Masters
+</h1>
+
 <p>
-The Erasmus Mundus Joint Master's Scholarship is a prestigious, fully funded scholarship sponsored by the European Union. It allows international students to study at multiple universities across Europe and earn a joint or multiple master's degree.
+Explore Erasmus Mundus Joint Masters and discover international study opportunities offered through cooperation between universities across Europe and beyond.
 </p>
+
 </div>
 
-<div class="card">
+</section>
+
+
+<!-- ===== Quick Information ===== -->
+
+<div class="quick-info">
+
+<div class="info-box">
+
+<span>🇪🇺</span>
+
+<h4>Region</h4>
+
+<p>Europe & Partners</p>
+
+</div>
+
+
+<div class="info-box">
+
+<span>💰</span>
+
+<h4>Funding</h4>
+
+<p>Scholarship Support</p>
+
+</div>
+
+
+<div class="info-box">
+
+<span>🎓</span>
+
+<h4>Study Level</h4>
+
+<p>Master's</p>
+
+</div>
+
+
+<div class="info-box">
+
+<span>📅</span>
+
+<h4>Deadline</h4>
+
+<p>Varies by programme</p>
+
+</div>
+
+</div>
+
+
+<!-- ===== Main Content ===== -->
+
+<main class="container">
+
+
+<!-- About -->
+
+<section class="info-card">
+
+<h2>📖 About Erasmus Mundus</h2>
+
+<p>
+Erasmus Mundus Joint Masters are international master's programmes delivered by a consortium of higher education institutions. Students can study in more than one country as part of the programme.
+</p>
+
+</section>
+
+
+<!-- Eligibility -->
+
+<section class="info-card">
+
 <h2>✅ Eligibility</h2>
+
 <ul>
-<li>✔ Good academic record</li>
-<li>✔ Valid passport</li>
-<li>✔ Bachelor's degree (for master's programs)</li>
-<li>✔ Meet the admission requirements of the selected Erasmus Mundus program</li>
-<div class="card">
-<h2>🌐 Official Website</h2>
 
-<a class="btn" href="https://erasmus-plus.ec.europa.eu/opportunities/opportunities-for-individuals/students/erasmus-mundus-joint-masters" target="_blank">
-Visit Official Erasmus Mundus Website
+<li>🎓 Applicants generally need a recognised bachelor's degree or equivalent qualification.</li>
+
+<li>🌍 Students from around the world can apply, subject to the specific programme rules.</li>
+
+<li>📚 Academic requirements depend on the selected master's programme.</li>
+
+<li>🗣️ Language requirements vary between programmes and may require proof of proficiency.</li>
+
+<li>📄 Each Erasmus Mundus programme has its own specific admission and scholarship requirements.</li>
+
+</ul>
+
+</section>
+
+
+<!-- Benefits -->
+
+<section class="info-card">
+
+<h2>🎁 Possible Benefits</h2>
+
+<ul>
+
+<li>💰 Competitive scholarships may be available for selected students.</li>
+
+<li>🎓 Participation in an international joint master's programme.</li>
+
+<li>🌍 Study opportunities across multiple countries and institutions.</li>
+
+<li>✈️ Scholarship support may contribute towards travel and mobility costs.</li>
+
+<li>📚 International academic and cultural experience.</li>
+
+</ul>
+
+</section>
+
+
+<!-- Documents -->
+
+<section class="info-card">
+
+<h2>📄 Common Documents</h2>
+
+<ul>
+
+<li>📄 Bachelor's degree certificate or equivalent</li>
+
+<li>📄 Academic transcripts</li>
+
+<li>🪪 Passport or identity document</li>
+
+<li>📄 CV / Resume</li>
+
+<li>📝 Motivation letter</li>
+
+<li>📑 Recommendation letters, when required</li>
+
+<li>🗣️ Language certificate, when required</li>
+
+</ul>
+
+</section>
+
+
+<!-- How to Apply -->
+
+<section class="info-card">
+
+<h2>📝 How to Apply</h2>
+
+<ul>
+
+<li><strong>01.</strong> 🔎 Explore the official Erasmus Mundus Joint Masters catalogue.</li>
+
+<li><strong>02.</strong> 🎓 Choose a programme matching your academic interests.</li>
+
+<li><strong>03.</strong> 📋 Read that programme's exact eligibility and admission requirements.</li>
+
+<li><strong>04.</strong> 📄 Prepare and submit the required documents.</li>
+
+<li><strong>05.</strong> 📅 Apply directly to the selected programme before its deadline.</li>
+
+</ul>
+
+</section>
+
+
+<!-- Official Website -->
+
+<section class="apply-card">
+
+<h2>🌐 Official Erasmus Mundus Information</h2>
+
+<p>
+Always check the official European Commission website and the selected master's programme for current scholarship details, eligibility requirements and deadlines.
+</p>
+
+<a
+class="primary-btn"
+href="https://education.ec.europa.eu/study-in-europe/programmes-and-scholarships/erasmus-mundus-joint-masters"
+target="_blank"
+rel="noopener noreferrer">
+
+Visit Official Erasmus Mundus Website →
+
 </a>
 
-</div>
+</section>
 
-<br>
 
-<a class="btn back" href="index.html">
-⬅ Back to Home
+<!-- Back -->
+
+<a class="back-btn" href="index.html">
+
+← Back to ScholarGuide AI
+
 </a>
+
+</main>
+
+
+<!-- ===== Footer ===== -->
+
+<footer>
+
+<h3>🎓 ScholarGuide AI</h3>
+
+<p>Your Smart Scholarship Assistant</p>
+
+<p>© 2026 ScholarGuide AI | Created by Laiba ❤️</p>
+
+</footer>
 
 </body>
-</html>
+
+  </html>
