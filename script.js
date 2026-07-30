@@ -169,7 +169,15 @@ function checkEligibility(){
 // ===== AI Assistant =====
 
 function askAI(){
+// ===== Quick AI Questions =====
 
+function quickAsk(question){
+
+    document.getElementById("aiQuestion").value = question;
+
+    askAI();
+
+}
     const question = document
         .getElementById("aiQuestion")
         .value
