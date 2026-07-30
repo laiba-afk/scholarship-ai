@@ -1674,3 +1674,28 @@ footer::after{
     height: auto;
     min-height: 0;
 }
+/* ===== Quick AI Questions ===== */
+
+.quick-questions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 15px 0 20px;
+}
+
+.quick-questions button {
+    border: 1px solid #dbe5f5;
+    background: #f5f8ff;
+    color: #173f7a;
+    padding: 10px 15px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.quick-questions button:hover {
+    transform: translateY(-2px);
+}
