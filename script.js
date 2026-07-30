@@ -162,7 +162,9 @@ function checkEligibility(){
 
     </div>
 
-    }
+        `;
+
+}
 
 // ===== AI Assistant =====
 
