@@ -199,7 +199,61 @@ function askAI(){
             <a href="daad.html" class="primary-btn">View DAAD →</a>
         `;
     }
+else if(question.includes("usa") || question.includes("united states") || question.includes("america")){
+    response = `
+        <h3>🇺🇸 Fulbright Scholarship</h3>
+        <p>Fulbright offers scholarship opportunities for international students and researchers in the USA.</p>
+        <a href="usa.html" class="primary-btn">View Fulbright →</a>
+    `;
+}
 
+else if(question.includes("uk") || question.includes("united kingdom") || question.includes("britain")){
+    response = `
+        <h3>🇬🇧 Chevening Scholarship</h3>
+        <p>Chevening is a UK government scholarship programme for eligible international students.</p>
+        <a href="chevening.html" class="primary-btn">View Chevening →</a>
+    `;
+}
+
+else if(question.includes("canada")){
+    response = `
+        <h3>🇨🇦 Canada Scholarships</h3>
+        <p>Explore scholarship opportunities in Canada and check each programme's specific eligibility requirements.</p>
+        <a href="canada.html" class="primary-btn">View Canada →</a>
+    `;
+}
+
+else if(question.includes("japan") || question.includes("mext")){
+    response = `
+        <h3>🇯🇵 MEXT Scholarship</h3>
+        <p>MEXT is a Japanese government scholarship programme for international students.</p>
+        <a href="mext.html" class="primary-btn">View MEXT →</a>
+    `;
+}
+
+else if(question.includes("australia")){
+    response = `
+        <h3>🇦🇺 Australia Awards</h3>
+        <p>Australia Awards provides opportunities for eligible students from participating countries.</p>
+        <a href="australia.html" class="primary-btn">View Australia Awards →</a>
+    `;
+}
+
+else if(question.includes("turkey") || question.includes("turkiye")){
+    response = `
+        <h3>🇹🇷 Türkiye Scholarships</h3>
+        <p>Türkiye Scholarships offers opportunities for international students to study in Türkiye.</p>
+        <a href="turkiye.html" class="primary-btn">View Türkiye Scholarships →</a>
+    `;
+}
+
+else if(question.includes("europe") || question.includes("erasmus")){
+    response = `
+        <h3>🇪🇺 Erasmus Mundus</h3>
+        <p>Erasmus Mundus Joint Masters provide opportunities to study through international joint programmes in Europe.</p>
+        <a href="europe.html" class="primary-btn">View Erasmus Mundus →</a>
+    `;
+}
     else if(question.includes("document")){
         response = `
             <h3>📄 Common Documents</h3>
