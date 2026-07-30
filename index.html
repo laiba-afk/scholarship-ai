@@ -280,7 +280,25 @@ type="text"
 id="aiQuestion"
 placeholder="Ask something like: Which scholarship is best for me?"
 >
+<div class="quick-questions">
 
+<button onclick="quickAsk('Which scholarship is best for me?')">
+🎓 Best scholarship for me?
+</button>
+
+<button onclick="quickAsk('Tell me about Germany scholarships')">
+🇩🇪 Study in Germany?
+</button>
+
+<button onclick="quickAsk('What documents do I need?')">
+📄 Required documents?
+</button>
+
+<button onclick="quickAsk('Which scholarships are fully funded?')">
+💰 Fully funded scholarships?
+</button>
+
+</div>
 <button class="primary-btn" onclick="askAI()">
 ✨ Ask AI
 </button>
@@ -534,9 +552,6 @@ View Details
 </div>
 
 </section>
-
-<!-- AI Assistant -->
-
 
 <!-- Contact -->
 
