@@ -1,96 +1,168 @@
-// ===== Scholarship Search =====
-
-function searchScholarship(){
-
-let search = document.getElementById("searchBox").value.toLowerCase();
-
-const pages = {
-"germany":"daad.html",
-"usa":"usa.html",
-"united states":"usa.html",
-"uk":"chevening.html",
-"united kingdom":"chevening.html",
-"canada":"canada.html",
-"korea":"gks.html",
-"south korea":"gks.html",
-"japan":"mext.html",
-"china":"csc.html",
-"australia":"australia.html",
-"turkiye":"turkiye.html",
-"turkey":"turkiye.html",
-"europe":"europe.html"
-};
-
-if(pages[search]){
-window.location.href = pages[search];
-}else{
-alert("Scholarship not found.");
-}
-
-}
-
-// ===== Country Select =====
-
-function openCountryPage(){
-
-let page = document.getElementById("countrySelect").value;
-
-if(page!=""){
-window.location.href = page;
-}
-
-}
-
 // ===== Smart Eligibility Checker =====
 
 function checkEligibility(){
 
-let education = document.getElementById("education").value;
-let percentage = Number(document.getElementById("percentage").value);
-let country = document.getElementById("country").value;
-let result = document.getElementById("result");
+    let education = document.getElementById("education").value;
+    let percentage = Number(document.getElementById("percentage").value);
+    let english = document.getElementById("english").value;
+    let country = document.getElementById("country").value;
+    let result = document.getElementById("result");
 
-if(education=="" || percentage==0 || country==""){
-result.style.display="block";
-result.innerHTML="⚠ Please fill all fields.";
-return;
-}
+    if(education === "" || percentage === 0 || country === ""){
 
-let score = 0;
+        result.style.display = "block";
 
-if(percentage>=95){
-score=98;
-}
-else if(percentage>=90){
-score=92;
-}
-else if(percentage>=80){
-score=85;
-}
-else if(percentage>=70){
-score=72;
-}
-else{
-score=55;
-}
+        result.innerHTML = `
+        <h3>⚠️ Please complete your details</h3>
+        <p>Select your education, enter your percentage and choose a country.</p>
+        `;
 
-result.style.display="block";
+        return;
+    }
 
-result.innerHTML=`
-<h3>🎯 Eligibility Score: ${score}%</h3>
 
-<p><b>🎓 Education:</b> ${education}</p>
+    // ===== Eligibility Score =====
 
-<p><b>🌍 Preferred Country:</b> ${country}</p>
+    let score;
 
-<p><b>💰 Funding:</b> Fully Funded Scholarships Available</p>
+    if(percentage >= 95){
+        score = 98;
+    }
+    else if(percentage >= 90){
+        score = 92;
+    }
+    else if(percentage >= 80){
+        score = 85;
+    }
+    else if(percentage >= 70){
+        score = 72;
+    }
+    else if(percentage >= 60){
+        score = 62;
+    }
+    else{
+        score = 50;
+    }
 
-<p><b>📄 Documents:</b> Passport, Academic Transcript, SOP, Recommendation Letter</p>
 
-<p><b>💡 Recommendation:</b> Continue preparing a strong application and apply before the deadline.</p>
-`;
+    // ===== Scholarship Matching =====
 
-}
+    const scholarships = {
+
+        "Germany": {
+            name: "DAAD Scholarship",
+            page: "daad.html",
+            flag: "🇩🇪"
+        },
+
+        "USA": {
+            name: "Fulbright",
+            page: "usa.html",
+            flag: "🇺🇸"
+        },
+
+        "United Kingdom": {
+            name: "Chevening Scholarship",
+            page: "chevening.html",
+            flag: "🇬🇧"
+        },
+
+        "Canada": {
+            name: "Vanier Scholarship",
+            page: "canada.html",
+            flag: "🇨🇦"
+        },
+
+        "South Korea": {
+            name: "GKS Scholarship",
+            page: "gks.html",
+            flag: "🇰🇷"
+        },
+
+        "Japan": {
+            name: "MEXT Scholarship",
+            page: "mext.html",
+            flag: "🇯🇵"
+        },
+
+        "China": {
+            name: "CSC Scholarship",
+            page: "csc.html",
+            flag: "🇨🇳"
+        },
+
+        "Australia": {
+            name: "Australia Awards",
+            page: "australia.html",
+            flag: "🇦🇺"
+        },
+
+        "Türkiye": {
+            name: "Türkiye Scholarships",
+            page: "turkiye.html",
+            flag: "🇹🇷"
+        }
+
+    };
+
+
+    let scholarship = scholarships[country];
+
+
+    // ===== Result =====
+
+    result.style.display = "block";
+
+    result.innerHTML = `
+
+    <div class="ai-result">
+
+        <h3>🤖 AI Eligibility Result</h3>
+
+        <h2>🎯 ${score}% Match</h2>
+
+        <p>
+        <b>🎓 Education:</b> ${education}
+        </p>
+
+        <p>
+        <b>📊 Percentage:</b> ${percentage}%
+        </p>
+
+        <p>
+        <b>🌍 Country:</b> ${country}
+        </p>
+
+        <p>
+        <b>🇬🇧 English Test:</b> ${english || "Not selected"}
+        </p>
+
+        <hr>
+
+        <h3>
+        ⭐ Recommended Scholarship
+        </h3>
+
+        <p style="font-size:18px;">
+        ${scholarship.flag} <b>${scholarship.name}</b>
+        </p>
+
+        <p>
+        💰 Funding: Check the official scholarship requirements
+        </p>
+
+        <p>
+        💡 Your result is an initial match, not a final eligibility decision.
+        Always check the official scholarship requirements.
+        </p>
+
+        <a href="${scholarship.page}" class="primary-btn">
+        View Scholarship →
+        </a>
+
+    </div>
+
+    ;
 
 // ===== AI Assistant =====
 
@@ -99,3 +171,4 @@ function askAI(){
 alert("🚀 AI Assistant will be available in the next update.");
 
 }
+
